@@ -55,15 +55,17 @@ func main() {
 		fmt.Println("Search Term: ", r.Channel.ItemList[i].Title)
 		fmt.Println("Search Traffic: ", r.Channel.ItemList[i].Traffic)
 		fmt.Println("Search Link: ", r.Channel.ItemList[i].Link)
+		fmt.Println("News Headlines:")
+		fmt.Println("----------------------------------------------------------")
 
 		for j := range r.Channel.ItemList[i].NewsItems {
-			fmt.Println("----------------------------------------------------------")
 			fmt.Println("Headline: ", r.Channel.ItemList[i].NewsItems[j].Headline)
 			fmt.Println("Headline Link: ", r.Channel.ItemList[i].NewsItems[j].HeadlineLink)
 		}
 		fmt.Println("----------------------------------------------------------")
 		fmt.Printf("\n")
 	}
+
 }
 
 func readGoogleTrends() []byte {
